@@ -4,7 +4,7 @@ public class Pizza {
 
     private int price;
     private Boolean isVeg;
-    private String bill;
+    private String bill="";
     private boolean isExtraCheese;
     private boolean isExtraTopping;
     private boolean isTakeAway;
@@ -12,10 +12,8 @@ public class Pizza {
     private boolean isBill;
 
 
-
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
-         this.bill="";
          this.isExtraCheese=false;
          this.isExtraTopping=false;
          this.isTakeAway=false;
@@ -23,16 +21,15 @@ public class Pizza {
         // your code goes here
         if(isVeg)
         {
-            this.price+=300;
+            this.price=300;
             this.extraToppings=70;
-            System.out.println("Base Price Of The Pizza: "+this.price);
         }
         else {
             this.price+=400;
             this.extraToppings=120;
-            System.out.println("Base Price Of The Pizza: "+this.price);
 
         }
+        this.bill+="Base Price Of The Pizza: "+this.price+"\n";
 
     }
 
